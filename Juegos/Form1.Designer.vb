@@ -22,6 +22,7 @@ Partial Class Juegos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.DadoTurno = New System.Windows.Forms.Button()
         Me.EmpezarBtn = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -48,7 +49,9 @@ Partial Class Juegos
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.EventLog1 = New System.Diagnostics.EventLog()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.Lblfecha = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,7 +59,6 @@ Partial Class Juegos
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DadoTurno
@@ -289,15 +291,31 @@ Partial Class Juegos
         Me.Label1.TabIndex = 22
         Me.Label1.Text = "Introduce los datos de cada jugador:"
         '
-        'EventLog1
+        'Timer1
         '
-        Me.EventLog1.SynchronizingObject = Me
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 1000
+        '
+        'Timer2
+        '
+        Me.Timer2.Enabled = True
+        Me.Timer2.Interval = 1000
+        '
+        'Lblfecha
+        '
+        Me.Lblfecha.AutoSize = True
+        Me.Lblfecha.Location = New System.Drawing.Point(372, 32)
+        Me.Lblfecha.Name = "Lblfecha"
+        Me.Lblfecha.Size = New System.Drawing.Size(0, 17)
+        Me.Lblfecha.TabIndex = 23
+        Me.Lblfecha.Visible = False
         '
         'Juegos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(637, 523)
+        Me.Controls.Add(Me.Lblfecha)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.PictureBox4)
@@ -326,7 +344,6 @@ Partial Class Juegos
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -358,5 +375,7 @@ Partial Class Juegos
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EventLog1 As EventLog
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Timer2 As Timer
+    Friend WithEvents Lblfecha As Label
 End Class

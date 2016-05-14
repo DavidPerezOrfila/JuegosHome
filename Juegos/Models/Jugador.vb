@@ -13,11 +13,15 @@
     End Sub
 
     Private sumarPuntuacion As Integer
-    Private lanzarDado As Integer
+    Private Dadomax As Integer
 
-    Public Function lanzar() As Integer
+    Public Function escogerturno() As Integer
         Dim poker1 As New Dados
-        poker1.girar()
-        Return lanzarDado
+        Dadomax = poker1.girar()
+        Return dadomax
     End Function
+
+    Public Sub turno()
+
+    End Sub
 End Class

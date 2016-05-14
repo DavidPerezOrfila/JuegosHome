@@ -120,6 +120,30 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\as.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blacks.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\king.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Queen.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reds.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sota.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maple Leaf Rag Played by Scott Joplin.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Sting Theme %28Joplin - The Entertainer%29.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

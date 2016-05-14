@@ -28,7 +28,6 @@
         Select Case valorLados
             Case 1
                 Negras = 1
-
             Case 2
                 Rojas = 2
             Case 3
